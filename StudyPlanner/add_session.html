@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Session – StudyFlow</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="app">
+
+  <!-- SIDEBAR (minimal version) -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-icon-sm">📚</div>
+      <span>StudyFlow</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="dashboard.html" class="nav-item">
+        <span class="nav-icon">🏠</span><span>Dashboard</span>
+      </a>
+
+      <a href="schedule.php" class="nav-item active">
+        <span class="nav-icon">📅</span><span>Schedule</span>
+      </a>
+
+      <a href="tasks.html" class="nav-item">
+        <span class="nav-icon">✅</span><span>Tasks</span>
+      </a>
+      <a href="progress.html" class="nav-item ">
+          <span class="nav-icon">📊</span><span>Progress</span>
+        </a>
+    </nav>
+    <div class="sidebar-footer">
+        <div class="user-avatar-sm" id="sidebarAvatar">A</div>
+        <div class="user-info-sm">
+          <div class="user-name-sm" id="sidebarName">Student</div>
+          <div class="user-role">Learner</div>
+        </div>
+      <a class="logout-btn" href="goodbye.html" title="Logout">⏻</a>
+      </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <header class="topbar">
+      <h3 class="page-title">Add Study Session</h3>
+    </header>
+
+    <section class="page active">
+
+      <div class="card">
+
+        <form action="session_form.php" method="POST">
+
+          <div class="form-group">
+            <label class="form-label">Session Title <span class="required">*</span></label>
+            <input type="text" name="title" class="form-input" placeholder="e.g. Morning Revision" required>
+          </div>
+
+          <div class="form-row-2">
+
+            <div class="form-group">
+              <label class="form-label">Subject <span class="required">*</span></label>
+              <input type="text" name="subject" class="form-input" placeholder="e.g. Mathematics" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Date <span class="required">*</span></label>
+              <input type="date" name="session_date" class="form-input" required>
+            </div>
+
+          </div>
+
+          <div class="form-row-2">
+
+            <div class="form-group">
+              <label class="form-label">Start Time <span class="required">*</span></label>
+              <input type="time" name="start_time" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">End Time <span class="required">*</span></label>
+              <input type="time" name="end_time" class="form-input" required>
+            </div>
+
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Location</label>
+            <input type="text" name="location" class="form-input" placeholder="Library / Home / Online">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Notes</label>
+            <textarea name="notes" class="form-input form-textarea" placeholder="Optional notes..."></textarea>
+          </div>
+
+          <div class="modal-footer" style="padding:0; border:none; margin-top:20px;">
+
+            <a href="schedule.php" class="btn-secondary">Cancel</a>
+
+            <button type="submit" class="btn-primary">
+              Save Session
+            </button>
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+</body>
+</html>
